@@ -3,16 +3,76 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/background"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity" >
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="277dp"
+        android:layout_height="385dp"
+        android:background="@drawable/background"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.223"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/QuestionView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textColor="#FFFFFF"
+            android:textSize="40dp"/>
+
+        <RadioGroup
+            android:id="@+id/Options"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioButton
+                android:id="@+id/Op1"
+                android:textSize="40dp"
+                android:textColor="#FFFFFF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="True"/>
+
+            <RadioButton
+                android:id="@+id/Op2"
+                android:textSize="40dp"
+                android:textColor="#FFFFFF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="False"
+                />
+
+
+        </RadioGroup>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="162dp"
+        android:layout_marginBottom="70dp"
+        android:text="Next"
+        android:textColor="#FFFFFF"
+        android:textSize="30dp"
+        android:background="@drawable/button"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="1.0"
+        />
 </android.support.constraint.ConstraintLayout>
